@@ -35,15 +35,22 @@
 
                 function addScript (src, inline) {
                     var argObjArr;
-                    if (typeof src === 'object') argObjArr = (Array.isArray(src) || isNodeList(src)) ? src : [src];
+                    if (typeof src === 'object') {
+                        if (Array.isArray(src) || isNodeList(src)) {
+                            if (!src.length) return;
+                            argObjArr = src;
+                        }
+                        else argObjArr = [src];
+                    }
                     else argObjArr = [{ src: src, text: inline}];
-                    for (var idx = 0; idx < argObjArr.length; idx++)
-                        if (argObjArr[idx].src || argObjArr[idx].text ) {
+                    for (var i = 0; i < argObjArr.length; i++)
+                        if (argObjArr[i].src || argObjArr[i].text ) {
                             var newScript = document.createElement('script');
-                            if (argObjArr[idx].src) newScript.setAttribute('src', argObjArr[idx].src);
-                            if (argObjArr[idx].text) newScript.text = argObjArr[idx].text;
-                            if (argObjArr[idx].async) newScript.setAttribute('async','async');
-                            if (argObjArr[idx].defer) newScript.setAttribute('defer','defer');
+                            if (argObjArr[i].src) newScript.setAttribute('src', argObjArr[i].src);
+                            if (argObjArr[i].text) newScript.text = argObjArr[i].text;
+                            if (argObjArr[i].async) newScript.setAttribute('async', 'async');
+                            if (argObjArr[i].defer) newScript.setAttribute('defer', 'defer');
+                            if (argObjArr[i].crossorigin) newScript.setAttribute('crossorigin', argObjArr[i].crossorigin);
                             document.body.appendChild(newScript);
                         }
                 }
@@ -76,7 +83,7 @@
                             allowedGroups.push(groupName);
                         }
                     }
-                    addScript(scripts);
+                    if (scripts.length) addScript(scripts);
 
                     localStorage.setItem('publii-gdpr-allowed-cookies', allowedGroups.join(','));
                     popup.classList.remove('cookie-popup--is-sticky');
@@ -105,7 +112,7 @@
                                 checkbox.checked = true;
                             }
                         }
-                        addScript(scripts);
+                        if (scripts.length) addScript(scripts);
                     }
                 }
             })();
