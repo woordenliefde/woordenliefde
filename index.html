@@ -53,7 +53,6 @@
                 var save = popup.querySelector('button');
                 var currentConfig = localStorage.getItem('publii-gdpr-allowed-cookies');
                 var blockedScripts = document.querySelectorAll('script[type^="gdpr-blocker/"], script[type^=\'{{\'][type*=\'gdprScriptBlocker\'][type$=\'}}\']');
-                ${linkCode}
 
                 popup.addEventListener('click', function() {
                     if (!popup.classList.contains('cookie-popup--is-sticky')) {
