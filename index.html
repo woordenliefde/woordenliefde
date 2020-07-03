@@ -19,27 +19,41 @@
                   this.classList.add('is-loaded');
                }, false);
          }
-      }</script><script id="dsq-count-scr" src="https://woordenliefde.disqus.com/count.js" type="gdpr-blocker/social" async></script><div class="cookie-popup js-cookie-popup cookie-popup--uses-badge"><h2>Deze website maakt gebruik van cookies.</h2><p>Selecteer via onderstaande checkboxen voor welke cookies u zich wilt aanmelden; onze website maakt gebruik van cookies om siteverkeer en gebruikersactiviteit op onze site te onderzoeken, voor marketing en om sociale mediafunctionaliteit te bieden. <a href="https://woordenliefde.nl/privacybeleid/">Privacybeleid</a></p><form><input id="gdpr-necessary" name="gdpr-necessary" checked="checked" disabled="disabled" type="checkbox"> <label for="gdpr-necessary">Required</label> <input id="gdpr-functions" name="gdpr-functions" type="checkbox"> <label for="gdpr-functions">Functionaliteit</label> <input id="gdpr-analytics" name="gdpr-analytics" type="checkbox"> <label for="gdpr-analytics">Gebruik statistieken</label> <input id="gdpr-social" name="gdpr-social" type="checkbox"> <label for="gdpr-social">Reacties en social media</label><p class="cookie-popup__save-wrapper"><button type="submit" class="cookie-popup__save">Toepassen</button></p></form><span class="cookie-popup-label">Cookies en Privacy</span></div><script>(function() {
+      }</script><script id="dsq-count-scr" src="https://woordenliefde.disqus.com/count.js" type="gdpr-blocker/social" async></script><div class="cookie-popup js-cookie-popup cookie-popup--uses-badge"><h2>Deze website maakt gebruik van cookies.</h2><p>Selecteer via onderstaande checkboxen voor welke cookies u zich wilt aanmelden; onze website maakt gebruik van cookies om siteverkeer en gebruikersactiviteit op onze site te onderzoeken, voor marketing en om sociale mediafunctionaliteit te bieden. <a href="https://woordenliefde.nl/privacybeleid/">Privacybeleid</a></p><form><input id="gdpr-necessary" name="gdpr-necessary" checked="checked" disabled="disabled" type="checkbox"> <label for="gdpr-necessary">Required</label> <input id="gdpr-functions" name="gdpr-functions" type="checkbox"> <label for="gdpr-functions">Functionaliteit</label> <input id="gdpr-analytics" name="gdpr-analytics" type="checkbox"> <label for="gdpr-analytics">Gebruik statistieken</label> <input id="gdpr-social" name="gdpr-social" type="checkbox"> <label for="gdpr-social">Reacties en social media</label><p class="cookie-popup__save-wrapper"><button type="submit" class="cookie-popup__save">Toepassen</button></p></form><span class="cookie-popup-label">Cookies en Privacy</span></div>
+          <script>
+            (function() {
+                if (!Array.isArray) Array.isArray = function(arg) {
+                    return Object.prototype.toString.call(arg) === '[object Array]';
+                };
+                
+                function isNodeList(nodes) {
+                    return typeof nodes === 'object' &&
+                        /^\[object (HTMLCollection|NodeList|Object)\]$/.test(Object.prototype.toString.call(nodes)) &&
+                        (typeof nodes.length === 'number') &&
+                        (nodes.length === 0 || (typeof nodes[0] === "object" && nodes[0].nodeType > 0));
+                }
+
                 function addScript (src, inline) {
-                    var newScript = document.createElement('script');
-
-                    if (src) {
-                        newScript.setAttribute('src', src);
-                    }
-
-                    if (inline) {
-                        newScript.text = inline;
-                    }
-
-                    document.body.appendChild(newScript);
+                    var argObjArr;
+                    if (typeof src === 'object') argObjArr = (Array.isArray(src) || isNodeList(src)) ? src : [src];
+                    else argObjArr = [{ src: src, text: inline}];
+                    for (var idx = 0; idx < argObjArr.length; idx++)
+                        if (argObjArr[idx].src || argObjArr[idx].text ) {
+                            var newScript = document.createElement('script');
+                            if (argObjArr[idx].src) newScript.setAttribute('src', argObjArr[idx].src);
+                            if (argObjArr[idx].text) newScript.text = argObjArr[idx].text;
+                            if (argObjArr[idx].async) newScript.setAttribute('async','async');
+                            if (argObjArr[idx].defer) newScript.setAttribute('defer','defer');
+                            document.body.appendChild(newScript);
+                        }
                 }
 
                 var popup = document.querySelector('.js-cookie-popup');
                 var checkboxes = popup.querySelectorAll('input[type="checkbox"]');
                 var save = popup.querySelector('button');
                 var currentConfig = localStorage.getItem('publii-gdpr-allowed-cookies');
-                var blockedScripts = document.querySelectorAll('script[type^="gdpr-blocker/"]');
-                
+                var blockedScripts = document.querySelectorAll('script[type^="gdpr-blocker/"], script[type^=\'{{\'][type*=\'gdprScriptBlocker\'][type$=\'}}\']');
+                ${linkCode}
 
                 popup.addEventListener('click', function() {
                     if (!popup.classList.contains('cookie-popup--is-sticky')) {
@@ -53,18 +67,17 @@
                     popup.classList.remove('cookie-popup--is-sticky');
                     var allowedGroups = [];
 
+                    var scripts = [];
                     for (var i = 0; i < checkboxes.length; i++) {
                         if (checkboxes[i].checked) {
                             var groupName = checkboxes[i].getAttribute('name').replace('gdpr-', '');
-                            var scripts = document.querySelectorAll('script[type="gdpr-blocker/' + groupName + '"]');
-
-                            for (var j = 0; j < scripts.length; j++) {
-                                addScript(scripts[j].src, scripts[j].text);
-                            }
-
+                            scripts = scripts.concat( 
+                                document.querySelectorAll('script[type="gdpr-blocker/' + groupName + '"], script[type^=\'{{\'][type*=\'gdprScriptBlocker\'][type*=\'"' + groupName + '"\'][type$=\'}}\']')
+                            );
                             allowedGroups.push(groupName);
                         }
                     }
+                    addScript(scripts);
 
                     localStorage.setItem('publii-gdpr-allowed-cookies', allowedGroups.join(','));
                     popup.classList.remove('cookie-popup--is-sticky');
@@ -82,18 +95,19 @@
                     if (currentConfig !== '') {
                         var allowedGroups = currentConfig.split(',');
 
+                        var scripts = [];
                         for (var i = 0; i < allowedGroups.length; i++) {
-                            var scripts = document.querySelectorAll('script[type="gdpr-blocker/' + allowedGroups[i] + '"]');
+                            scripts = scripts.concat( 
+                                document.querySelectorAll('script[type="gdpr-blocker/' + allowedGroups[i] + '"], script[type^=\'{{\'][type*=\'gdprScriptBlocker\'][type*=\'"' + allowedGroups[i] + '"\'][type$=\'}}\']'),
+                            );
                             var checkbox = popup.querySelector('input[type="checkbox"][name="gdpr-' + allowedGroups[i] + '"]');
 
                             if (checkbox) {
                                 checkbox.checked = true;
                             }
-
-                            for (var j = 0; j < scripts.length; j++) {
-                                addScript(scripts[j].src, scripts[j].text);
-                            }
                         }
+                        addScript(scripts);
                     }
                 }
-            })();</script></body></html>
+            })();
+          </script></body></html>
