@@ -10,7 +10,7 @@
 					gcse.src   = 'https://cse.google.com/cse.js?cx=' + cx;
 					var s = document.getElementsByTagName('script')[0];
 					s.parentNode.insertBefore(gcse, s);
-				})();</script><gcse:searchresults-only></gcse:searchresults-only></div></div></main><footer class="footer"><div class="footer__social"><a href="https://twitter.com/woordenliefdenl" aria-label="Twitter" class="twitter"><svg><use xlink:href="https://woordenliefde.nl/assets/svg/svg-map.svg#twitter"/></svg></a></div><div class="footer__copyright">&copy; 2020 Saskia Sijmons - <a href="https://woordenliefde.nl/" target="_top">woordenliefde.nl</a></div></footer><script>window.publiiThemeMenuConfig = {    
+				})();</script><gcse:searchresults-only></gcse:searchresults-only></div></div></main><footer class="footer"><div class="footer__social"><a href="https://twitter.com/woordenliefdenl" aria-label="Twitter" class="twitter" target="_blank"><svg><use xlink:href="https://woordenliefde.nl/assets/svg/svg-map.svg#twitter"/></svg></a></div><div class="footer__copyright">&copy; 2020 Saskia Sijmons - <a href="https://woordenliefde.nl/" target="_top">woordenliefde.nl</a></div></footer><script>window.publiiThemeMenuConfig = {    
       mobileMenuMode: 'sidebar',
       animationSpeed: 300,
       submenuWidth: 'auto',
@@ -91,6 +91,7 @@
                     if (scripts && scripts.length) addScript(scripts);
 
                     localStorage.setItem('publii-gdpr-allowed-cookies', allowedGroups.join(','));
+                    window.publii_gdpr_allowed_cookies = allowedGroups;
                     popup.classList.remove('cookie-popup--is-sticky');
 
                     setTimeout(function () {
@@ -102,6 +103,7 @@
                     popup.classList.add('cookie-popup--is-sticky');
                 } else if (currentConfig !== '') {
                     var allowedGroups = currentConfig.split(',');
+                    window.publii_gdpr_allowed_cookies = allowedGroups;
 
                     var scriptsSelector = '';
                     for (var i = 0; i < allowedGroups.length; i++) {
