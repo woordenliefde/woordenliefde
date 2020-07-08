@@ -40,7 +40,7 @@
             
                     publiiLoadDisqus();
             
-                    window.onscroll = function() {
+                    window.onscroll = function () {
                         publiiLoadDisqus();
                     };
             
@@ -50,13 +50,13 @@
                     if (divDisqusThread) {
                         let elCookiePolicyLink = document.createElement('a');
                         elCookiePolicyLink.textContent = ('Schakel alsjeblieft Social media cookies in om' || 'Please enable Social media cookies to view the') + ' ' + ('de reacties weer te geven.' || 'comments powered by Disqus.');
-                        elCookiePolicyLink.onclick = function() {
+                        elCookiePolicyLink.onclick = function () {
                             let cookiePolicyPopup = document.querySelector('.js-cookie-popup');
                             if (cookiePolicyPopup) cookiePolicyPopup.classList.add('cookie-popup--is-sticky');
                         };
                         divDisqusThread.appendChild(elCookiePolicyLink);
                     }
-                }</script><noscript>Schakel alsjeblieft Javascript in om <a href="https://disqus.com/?ref_noscript" rel="nofollow">de reacties weer te geven.</a></noscript></div></div></main><footer class="footer"><div class="footer__social"><a href="https://twitter.com/woordenliefdenl" aria-label="Twitter" class="twitter"><svg><use xlink:href="https://woordenliefde.nl/assets/svg/svg-map.svg#twitter"/></svg></a></div><div class="footer__copyright">&copy; 2020 Saskia Sijmons - <a href="https://woordenliefde.nl/" target="_top">woordenliefde.nl</a></div></footer><script>window.publiiThemeMenuConfig = {    
+                }</script><noscript>Schakel alsjeblieft Javascript in om <a href="https://disqus.com/?ref_noscript" rel="nofollow" target="_blank">de reacties weer te geven.</a></noscript></div></div></main><footer class="footer"><div class="footer__social"><a href="https://twitter.com/woordenliefdenl" aria-label="Twitter" class="twitter"><svg><use xlink:href="https://woordenliefde.nl/assets/svg/svg-map.svg#twitter"/></svg></a></div><div class="footer__copyright">&copy; 2020 Saskia Sijmons - <a href="https://woordenliefde.nl/" target="_top">woordenliefde.nl</a></div></footer><script>window.publiiThemeMenuConfig = {    
       mobileMenuMode: 'sidebar',
       animationSpeed: 300,
       submenuWidth: 'auto',
