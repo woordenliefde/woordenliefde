@@ -1,4 +1,6 @@
 User-agent: *
 Crawl-delay: 10
+Disallow: /cdn-cgi/l/email-protection
+Disallow: /cdn-cgi/trace
 Allow: /
 Sitemap:  https://woordenliefde.nl/sitemap.xml
