@@ -10,6 +10,24 @@
     <id>https://woordenliefde.nl</id>
 
     <entry>
+        <title>Over Patricia</title>
+        <author>
+            <name>Saskia</name>
+        </author>
+        <link href="https://woordenliefde.nl/over-patricia-2/"/>
+        <id>https://woordenliefde.nl/over-patricia-2/</id>
+            <category term="Over"/>
+
+        <updated>2021-02-23T01:30:53+01:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://woordenliefde.nl/media/posts/9/Patricia.jpg" alt="Patricia" />
+                     
+                ]]>
+            </summary>
+        <content></content>
+    </entry>
+    <entry>
         <title>Het mannetje Persijn</title>
         <author>
             <name>Saskia</name>
@@ -18,7 +36,7 @@
         <id>https://woordenliefde.nl/het-mannetje-persijn/</id>
             <category term="Gedichten"/>
 
-        <updated>2021-02-23T01:26:02+01:00</updated>
+        <updated>2021-02-23T01:30:53+01:00</updated>
             <summary>
                 <![CDATA[
                      Het mannetje Persijn bleef maar zo klein En weet je hoe dat was gekomen? Als hij moest eten zat&hellip;
@@ -35,10 +53,46 @@
         <id>https://woordenliefde.nl/door-de-groene-poort/</id>
             <category term="Verhalen"/>
 
-        <updated>2021-02-23T01:26:02+01:00</updated>
+        <updated>2021-02-23T01:30:53+01:00</updated>
             <summary>
                 <![CDATA[
                      Het verhaal is een geleide meditatie voor jonge kinderen. Het kan toegepast worden voor het slapen gaan of in&hellip;
+                ]]>
+            </summary>
+        <content></content>
+    </entry>
+    <entry>
+        <title>Privacybeleid </title>
+        <author>
+            <name>Saskia</name>
+        </author>
+        <link href="https://woordenliefde.nl/privacybeleid/"/>
+        <id>https://woordenliefde.nl/privacybeleid/</id>
+            <category term="Privacy"/>
+            <category term="Over"/>
+
+        <updated>2021-02-23T01:30:53+01:00</updated>
+            <summary>
+                <![CDATA[
+                     https://woordenliefde.nl Woordenliefde geeft veel om uw privacy. Wij verwerken daarom uitsluitend gegevens die wij nodig hebben voor (het verbeteren&hellip;
+                ]]>
+            </summary>
+        <content></content>
+    </entry>
+    <entry>
+        <title>Over Mij</title>
+        <author>
+            <name>Saskia</name>
+        </author>
+        <link href="https://woordenliefde.nl/over-mij/"/>
+        <id>https://woordenliefde.nl/over-mij/</id>
+            <category term="Over"/>
+
+        <updated>2021-02-23T01:30:53+01:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://woordenliefde.nl/media/posts/3/Saskia-about.jpg" alt="Saskia" />
+                     Woorden kunnen krachtig zijn. Ze kunnen je bemoedigen of hoop geven. Ze kunnen je bij de strot grijpen van&hellip;
                 ]]>
             </summary>
         <content></content>
