@@ -22,22 +22,23 @@
             "tags": [
                    "Over"
             ],
-            "date_published": "2021-02-24T13:55:43+01:00",
-            "date_modified": "2021-02-24T13:55:43+01:00"
+            "date_published": "2021-02-24T16:52:40+01:00",
+            "date_modified": "2021-02-24T16:52:40+01:00"
         },
         {
             "id": "https://woordenliefde.nl/het-mannetje-persijn/",
             "url": "https://woordenliefde.nl/het-mannetje-persijn/",
             "title": "Het mannetje Persijn",
             "summary": " Het mannetje Persijn bleef maar zo klein En weet je hoe dat was gekomen? Als hij moest eten zat&hellip;",
+            "image": "https://woordenliefde.nl/media/posts/6/woordenliefde-persijn-1-800x-3.jpg",
             "author": {
                 "name": "Saskia"
             },
             "tags": [
                    "Gedichten"
             ],
-            "date_published": "2021-02-24T13:55:43+01:00",
-            "date_modified": "2021-02-24T13:55:43+01:00"
+            "date_published": "2021-02-24T16:52:40+01:00",
+            "date_modified": "2021-02-24T16:52:40+01:00"
         },
         {
             "id": "https://woordenliefde.nl/door-de-groene-poort/",
@@ -50,8 +51,8 @@
             "tags": [
                    "Verhalen"
             ],
-            "date_published": "2021-02-24T13:55:43+01:00",
-            "date_modified": "2021-02-24T13:55:43+01:00"
+            "date_published": "2021-02-24T16:52:40+01:00",
+            "date_modified": "2021-02-24T16:52:40+01:00"
         },
         {
             "id": "https://woordenliefde.nl/over-patricia/",
@@ -65,8 +66,8 @@
             "tags": [
                    "Over"
             ],
-            "date_published": "2021-02-24T13:55:43+01:00",
-            "date_modified": "2021-02-24T13:55:43+01:00"
+            "date_published": "2021-02-24T16:52:40+01:00",
+            "date_modified": "2021-02-24T16:52:40+01:00"
         },
         {
             "id": "https://woordenliefde.nl/privacybeleid/",
@@ -80,8 +81,8 @@
                    "Privacy",
                    "Over"
             ],
-            "date_published": "2021-02-24T13:55:43+01:00",
-            "date_modified": "2021-02-24T13:55:43+01:00"
+            "date_published": "2021-02-24T16:52:40+01:00",
+            "date_modified": "2021-02-24T16:52:40+01:00"
         }
     ]
 }
