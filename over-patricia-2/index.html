@@ -40,13 +40,30 @@
         
         
         <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-YDM0E31JKG" type="gdpr-blocker/analytics"></script>
-        <!-- script async src="https://www.googletagmanager.com/gtag/js?id=G-YDM0E31JKG" type='{{ gdprScriptBlocker "analytics" }}'></script -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-YDM0E31JKG" type="text/javascript"></script>
         <script>
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
           gtag('config', 'G-YDM0E31JKG');
+          gtag('consent', 'default', {
+            'ad_storage': 'denied',
+            'analytics_storage': 'denied',
+          	'wait_for_update': 1000
+          });
+          gtag('set', 'ads_data_redaction', true);
+          gtag('set', 'url_passthrough', true);
+        </script>
+        <script type="gdpr-blocker/analytics">
+          gtag('consent', 'update', {
+            'analytics_storage': 'granted'
+          });
+        </script>
+        <script type="gdpr-blocker/advertising">
+          gtag('consent', 'update', {
+            'ad_storage': 'granted'
+          });
+          gtag('set', 'ads_data_redaction', false);
         </script>
         
         <script type="gdpr-blocker/analytics">
@@ -291,6 +308,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 type="checkbox">
             <label for="gdpr-social">
                 Reacties en social media
+            </label>
+            <input
+                id="gdpr-advertising"
+                name="gdpr-advertising"
+                type="checkbox">
+            <label for="gdpr-advertising">
+                Gepersonaliseerde advertenties
             </label>
 
                 <p class="cookie-popup__save-wrapper">
