@@ -303,6 +303,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <span class="cookie-popup-label">Cookies en Privacy</span>
         </div>
         <script>
+            var defaultChecked = false;
+            var global = global || window;
+            if (
+                global.doNotTrack
+                || (navigator && (navigator.doNotTrack || navigator.msDoNotTrack))
+                || (global.external && 'msTrackingProtectionEnabled' in global.external)
+            ) {
+                // The browser supports Do Not Track!
+                if (
+                    global.doNotTrack == '1'
+                    || (navigator && (navigator.doNotTrack == 'yes' || navigator.doNotTrack == '1' || navigator.msDoNotTrack == '1'))
+                    || (global.external && typeof global.external.msTrackingProtectionEnabled === 'function' && global.external.msTrackingProtectionEnabled()) 
+                ) {
+                    // Do Not Track is enabled!
+                } else {
+                    defaultChecked = true;
+                }
+            } else {
+                // Do Not Track is not supported
+                defaultChecked = true;
+            }
+            if (defaultChecked) {
+                var gdprCheckboxes = document.querySelectorAll('div.cookie-popup.js-cookie-popup > form > input[type=checkbox]');
+                if (gdprCheckboxes && gdprCheckboxes.length) gdprCheckboxes.forEach(function(el) { el.checked = true; }); 
+            }                
+        </script>
+        
+        <script>
             (function() {
                 if (!Array.isArray) Array.isArray = function(arg) {
                     return Object.prototype.toString.call(arg) === '[object Array]';
