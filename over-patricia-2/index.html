@@ -45,19 +45,19 @@
         
 		<script>
           (function () {
-              var d = document, 
-                  f = function() {
-                  var m = d.querySelector('meta[http-equiv=refresh]'),
-                      r = (m && m.content) ? m.content.match(/URL=(.+)/i)[1] : null;
-                  if (r) { 
-                      console.log('redirect to: ', r);
-                      window.location.replace(r);
-                  }    
-              };
+              var d = document,
+                  f = function () {
+                      var m = d.querySelector('meta[http-equiv=refresh]'),
+                          r = (m && m.content) ? m.content.match(/URL=(.+)/i)[1] : null;
+                      if (r) {
+                          console.log('redirect to: ', r);
+                          window.location.replace(r);
+                      }
+                  };
               if (d.readyState !== 'loading') f();
               else d.addEventListener('DOMContentLoaded', f);
           })();
-        </script>
+		</script>
 
         <link rel="preconnect" href="https://www.googletagmanager.com">
         <link rel="preconnect" href="https://analytics.google.com">
