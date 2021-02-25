@@ -42,11 +42,22 @@
         <link rel="preload" href="/assets/fonts/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2" as="font" type="font/woff2" crossorigin="crossorigin">      
         <script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://woordenliefde.nl/over-patricia-2/"},"headline":"Redirecting to /over-patricia","datePublished":"2021-02-23T11:56","dateModified":"2021-02-23T12:25","image":{"@type":"ImageObject","url":"https://woordenliefde.nl/media/website/woordenliefde_logo.png","height":111,"width":149},"description":"window.location.replace(\"../over-patricia/\");Deze pagina is verplaatst naar: Over Patricia - /over-patricia","author":{"@type":"Person","name":"Patricia"},"publisher":{"@type":"Organization","name":"Saskia","logo":{"@type":"ImageObject","url":"https://woordenliefde.nl/media/website/woordenliefde_logo.png","height":111,"width":149}}}</script>        
         
-        		<!-- fonts pre loaded in head.hbs theme override -->
-		<!--
-		<link rel="preload" href="/assets/fonts/0QIvMX1D_JOuMwr7Iw.woff2" as="font" type="font/woff2" crossorigin="crossorigin">
-		<link rel="preload" href="/assets/fonts/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2" as="font" type="font/woff2" crossorigin="crossorigin">
-		-->
+        
+		<script>
+          (function () {
+              var d = document, 
+                  f = function() {
+                  var m = d.querySelector('meta[http-equiv=refresh]'),
+                      r = (m && m.content) ? m.content.match(/URL=(.+)/i)[1] : null;
+                  if (r) { 
+                      console.log('redirect to: ', r);
+                      window.location.replace(r);
+                  }    
+              };
+              if (d.readyState !== 'loading') f();
+              else d.addEventListener('DOMContentLoaded', f);
+          })();
+        </script>
 
         <link rel="preconnect" href="https://www.googletagmanager.com">
         <link rel="preconnect" href="https://analytics.google.com">
@@ -88,14 +99,6 @@
           })(window, document, "clarity", "script", "5jel22l6cp");
         </script>
         
-        <script>
-          (async function () {
-            var m = document.querySelector('meta[http-equiv=refresh]');
-            var r = (m && m.content) ? m.content.match(/URL=(.+)/i)[1] : null;
-            if (r) window.location.replace(r.trim());
-          })();
-        </script>
-
         <link rel="preconnect" href="https://woordenliefde.disqus.com">
         <link rel="dns-prefetch" href="//disqus.com">
         <link rel="dns-prefetch" href="//c.disquscdn.com">
