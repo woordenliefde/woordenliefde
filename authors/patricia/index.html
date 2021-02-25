@@ -3,10 +3,7 @@
                   f = function () {
                       var m = d.querySelector('meta[http-equiv=refresh]'),
                           r = (m && m.content) ? m.content.match(/URL=(.+)/i)[1] : null;
-                      if (r) {
-                          console.log('redirect to: ', r);
-                          window.location.replace(r);
-                      }
+                      if (r) window.location.replace(r);
                   };
               if (d.readyState !== 'loading') f();
               else d.addEventListener('DOMContentLoaded', f);
