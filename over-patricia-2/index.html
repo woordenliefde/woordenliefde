@@ -37,7 +37,7 @@
 
         <link href="https://woordenliefde.nl/assets/css/fonts.googleapis.com_css_family_Lora_400,700-Playfair-Display_400,700_display-swap_subset-latin-ext.css?v=c43028b27ea123092e575ad1e526685e" rel="stylesheet" data-src-url="https://fonts.googleapis.com/css?family=Lora:400,700|Playfair+Display:400,700&display=swap&subset=latin-ext">
         <style>:root{--body-font:'Lora',serif;--heading-font:'Playfair Display',serif;--logo-font:var(--heading-font);--menu-font:var(--heading-font)}</style>
-        <link rel="stylesheet" href="https://woordenliefde.nl/assets/css/style.css?v=4c1186e5793bdb27614e09bb1a3587a8">
+        <link rel="stylesheet" href="https://woordenliefde.nl/assets/css/style.css?v=38e966134b668c7ddeb0eaa4771773c2">
         <link rel="preload" href="/assets/fonts/0QIvMX1D_JOuMwr7Iw.woff2" as="font" type="font/woff2" crossorigin="crossorigin">
         <link rel="preload" href="/assets/fonts/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2" as="font" type="font/woff2" crossorigin="crossorigin">      
         <script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://woordenliefde.nl/over-patricia-2/"},"headline":"Redirecting to /over-patricia","datePublished":"2021-02-23T11:56","dateModified":"2021-02-23T12:25","image":{"@type":"ImageObject","url":"https://woordenliefde.nl/media/website/woordenliefde_logo.png","height":111,"width":149},"description":"window.location.replace(\"../over-patricia/\");Deze pagina is verplaatst naar: Over Patricia - /over-patricia","author":{"@type":"Person","name":"Patricia"},"publisher":{"@type":"Organization","name":"Saskia","logo":{"@type":"ImageObject","url":"https://woordenliefde.nl/media/website/woordenliefde_logo.png","height":111,"width":149}}}</script>        
@@ -306,7 +306,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
    <script id="dsq-count-scr" src="https://woordenliefde.disqus.com/count.js" type="gdpr-blocker/social" async></script>  
 
 
-        <div class="cookie-popup js-cookie-popup  cookie-popup--uses-badge">
+        <div class="privc-popup js-privc-popup  privc-popup--uses-badge">
             <h2>Deze website maakt gebruik van cookies.</h2>
             
             <p>
@@ -358,17 +358,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 Gepersonaliseerde advertenties
             </label>
 
-                <p class="cookie-popup__save-wrapper">
-                <button type="submit" class="cookie-popup__save">
+                <p class="privc-popup__save-wrapper">
+                <button type="submit" class="privc-popup__save">
                     Toepassen
                 </button>
-                <button type="submit" class="cookie-popup__allowAll">
+                <button type="submit" class="privc-popup__allowAll">
                     Toestaan
                 </button>
                 </p>
             </form>
 
-            <span class="cookie-popup-label">Cookies en Privacy</span>
+            <span class="privc-popup-label">Cookies en Privacy</span>
         </div>
         
         <script>
@@ -425,7 +425,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     }
                 }
 
-                var popup = d.querySelector('.js-cookie-popup'),
+                var popup = d.querySelector('.js-privc-popup'),
                     currentConfig = localStorage.getItem('publii-gdpr-allowed-cookies'),
                     consentJson = localStorage.getItem('publii-gdpr-consent-json') || '{}',
                     allowedGroups = w.publii_gdpr_allowed_cookies = (currentConfig) ? currentConfig.split(',') : [],
@@ -444,8 +444,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 
                 if (popup) {
                     var cbs = popup.querySelectorAll('input[type="checkbox"]'),
-                        btnSave = popup.querySelector('button.cookie-popup__save'),
-                        btnAllowAll = popup.querySelector('button.cookie-popup__allowAll'),
+                        btnSave = popup.querySelector('button.privc-popup__save'),
+                        btnAllowAll = popup.querySelector('button.privc-popup__allowAll'),
                         consent = (consentJson && JSON) ? JSON.parse(consentJson) : {},
                         consentJsonUpdated = false,
                         dateNow = new Date(),
@@ -478,7 +478,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     }
 
                     popup.addEventListener('click', function() {
-                        if (!popup.classList.contains('cookie-popup--is-sticky')) popup.classList.add('cookie-popup--is-sticky');
+                        if (!popup.classList.contains('privc-popup--is-sticky')) popup.classList.add('privc-popup--is-sticky');
                     });
 
                     if (btnSave) btnSave.addEventListener('click', function(e) {
@@ -486,7 +486,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             e.preventDefault();
                             e.stopPropagation();
                         }
-                        popup.classList.remove('cookie-popup--is-sticky');
+                        popup.classList.remove('privc-popup--is-sticky');
                         var allowedGroups = [],
                             scriptsSelector = '',
                             dateNow = new Date()
@@ -530,7 +530,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         localStorage.setItem('publii-gdpr-consent-json', JSON.stringify(consent));
 
                         addScriptsBySelector(scriptsSelector);
-                        popup.classList.remove('cookie-popup--is-sticky');
+                        popup.classList.remove('privc-popup--is-sticky');
 
                         setTimeout(function () {
                             if (currentConfig !== null) w.location.reload();
@@ -549,7 +549,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         return false;
                     });
 
-                    if (currentConfig === null || hasNewConsentChoices) popup.classList.add('cookie-popup--is-sticky');
+                    if (currentConfig === null || hasNewConsentChoices) popup.classList.add('privc-popup--is-sticky');
                     if (consentJsonUpdated) localStorage.setItem('publii-gdpr-consent-json', JSON.stringify(consent));
                 }
 
