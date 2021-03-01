@@ -21,8 +21,8 @@
             "tags": [
                    "Gedichten"
             ],
-            "date_published": "2021-03-01T22:44:05+01:00",
-            "date_modified": "2021-03-01T22:44:05+01:00"
+            "date_published": "2021-03-01T23:26:40+01:00",
+            "date_modified": "2021-03-01T23:26:40+01:00"
         },
         {
             "id": "https://woordenliefde.nl/over-mij/",
@@ -36,8 +36,8 @@
             "tags": [
                    "Over"
             ],
-            "date_published": "2021-03-01T22:44:05+01:00",
-            "date_modified": "2021-03-01T22:44:05+01:00"
+            "date_published": "2021-03-01T23:26:40+01:00",
+            "date_modified": "2021-03-01T23:26:40+01:00"
         },
         {
             "id": "https://woordenliefde.nl/het-mannetje-persijn/",
@@ -51,8 +51,8 @@
             "tags": [
                    "Gedichten"
             ],
-            "date_published": "2021-03-01T22:44:05+01:00",
-            "date_modified": "2021-03-01T22:44:05+01:00"
+            "date_published": "2021-03-01T23:26:40+01:00",
+            "date_modified": "2021-03-01T23:26:40+01:00"
         },
         {
             "id": "https://woordenliefde.nl/door-de-groene-poort/",
@@ -65,14 +65,14 @@
             "tags": [
                    "Verhalen"
             ],
-            "date_published": "2021-03-01T22:44:05+01:00",
-            "date_modified": "2021-03-01T22:44:05+01:00"
+            "date_published": "2021-03-01T23:26:40+01:00",
+            "date_modified": "2021-03-01T23:26:40+01:00"
         },
         {
             "id": "https://woordenliefde.nl/over-patricia/",
             "url": "https://woordenliefde.nl/over-patricia/",
             "title": "Over Patricia",
-            "summary": " ",
+            "summary": " Welkom in mijn wereld lieve, geïnteresseerde bezoeker van “Woordenliefde” Kom maar binnen, in dat kleine houten huisje, diep in&hellip;",
             "image": "https://woordenliefde.nl/media/posts/9/Patricia.jpg",
             "author": {
                 "name": "Saskia"
@@ -80,8 +80,8 @@
             "tags": [
                    "Over"
             ],
-            "date_published": "2021-03-01T22:44:05+01:00",
-            "date_modified": "2021-03-01T22:44:05+01:00"
+            "date_published": "2021-03-01T23:26:40+01:00",
+            "date_modified": "2021-03-01T23:26:40+01:00"
         },
         {
             "id": "https://woordenliefde.nl/privacybeleid/",
@@ -95,8 +95,8 @@
                    "Privacy",
                    "Over"
             ],
-            "date_published": "2021-03-01T22:44:05+01:00",
-            "date_modified": "2021-03-01T22:44:05+01:00"
+            "date_published": "2021-03-01T23:26:40+01:00",
+            "date_modified": "2021-03-01T23:26:40+01:00"
         }
     ]
 }
